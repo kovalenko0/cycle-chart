@@ -1,0 +1,35 @@
+.chart {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 3px 3px 11px -3px #ababab;
+}
+
+.chart * {
+    pointer-events: none;
+}
+
+.cursor {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.cursor::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(0, 133, 255, 0.67);
+    border-radius: 50%;
+}
